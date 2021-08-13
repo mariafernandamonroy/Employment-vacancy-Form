@@ -4,84 +4,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styes.css">
     <title>Form</title>
 </head>
-<header>
-    <img src="images/logo.jpg" alt="">
-    <h1>MAYN ENTERPRISE</h1>
-    <h2>Vacante</h2>
-</header>
+
 <body>
-    <form action="database.sql" method="GET">
-        <fieldset>
-            <legend>Datos Personales</legend>
-            <label for="">Nombre: </label>
-            <input type="text" name="nombre" required autofocus minlength="3" maxlength="20" >
+
+    <header>
+        <img class="mayn_logo" src="images/logo.png" alt="mayn-logo">
+        Mayn Enterprise.SA
+        <h2>Formulario de Vacante de Empleo</h2>
+    </header>
+
+    
+    <div class="container">
+        <form class="formulario" action="" method="GET">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <label for="">Nombre: </label>
+                <input type="text" name="nombre" required autofocus minlength="3" maxlength="20" >
+                <br>
+                <label for="">Apellido: </label>
+                <input type="text" name="apellido" required minlength="5" maxlength="40">
+                <br>
+                <label for="">Teléfono: </label>
+                <input type="number" name="telefono">
+                <br>
+                <label for="">Correo electrónico: </label>
+                <input type="email" name="email" required minlength="6" maxlegth="40">
+                <br>
+                <label for="">Fecha de nacimiento: </label>
+                <input type="date" name="nacimiento" required>
+                <br>
+                <label for="">URL: </label>
+                <br>
+                <input type="url" name="url" placeholder="Escribe la URL de tu página web personal">
+                <br>
+                <label for="">Color favorito: </label>
+                <input class="favorite_color" type="color" name="color">
+            </fieldset>
             <br>
-            <label for="">Apellido: </label>
-            <input type="text" name="apellido" required minlength="5" maxlength="40">
+            <fieldset>
+                <legend>Datos del formulario</legend>
+                <label for="">Fecha: </label>
+                <input type="date" name="fecha" title="Ingresa la fecha en que llenaste el formulario">
+                <br>
+                <label for="">Tiempo: </label>
+                <input type="time" name="tiempo" required title="Ingrese la hora exacta en que empezó a llenar el formulario">
+                <br>
+                <label for="">Fecha y hora: </label>
+                <input type="datetime" name="fecha-hora" title="Ingrese la hora y fecha exacta en que empezó a llenar el formulario">
+                <br>
+                <label for="">Mes: </label>
+                <br>
+                <input type="month" name="mes" title="Ingrese el mes en que vio la publicación del empleo">
+                <br>
+                <label for="">Semana: </label>
+                <input type="week" name="semana" title="Ingrese la semana en que vio la publicación del empleo">
+                <br>
+                <label for="">Número: </label>
+                <input type="number" name="numero" min="-10" max="10" title="Ingrese un número entre -10 y 10">
+                <br>
+                <label for="">Término de búsqueda: </label>
+                <input type="search" name="busqueda">
+            </fieldset>
             <br>
-            <label for="">Teléfono: </label>
-            <input type="number" name="telefono">
+            <fieldset>
+                <legend>Hoja de vida</legend>
+                <label for="">Foto: </label>
+                <br>
+                <input type="file" name="foto" title="Formato jpeg,png">
+                <br>
+                <label for="">Hoja de vida: </label>
+                <br>
+                <input type="file" name="hv" title="Formato PDF">
+                <br><br>
+                <label for="">Seleccione el puesto de interés: </label>
+                <select name="puesto">
+                    <option value="1">Machine learning</option>
+                    <option value="2">Frontend</option>
+                    <option value="3">Backend</option>
+                    <option value="4">Scrum master </option>
+                    <option value="5">Pruebas automatizadas</option>
+                </select>
+            </fieldset>
             <br>
-            <label for="">Correo electrónico: </label>
-            <input type="email" name="email" required minlength="6" maxlegth="40">
-            <br>
-            <label for="">Fecha de nacimiento: </label>
-            <input type="date" name="nacimiento" required>
-            <br>
-            <label for="">URL: </label>
-            <input type="url" name="url" placeholder="Escribe la URL de tu página web personal">
-            <br>
-            <label for="">Color favorito: </label>
-            <input type="color" name="color">
-        </fieldset>
-        <fieldset>
-            <legend>Datos del formulario</legend>
-            <label for="">Fecha: </label>
-            <input type="date" name="fecha" title="Ingresa la fecha en que llenaste el formulario">
-            <br>
-            <label for="">Tiempo: </label>
-            <input type="time" name="tiempo" required title="Ingrese la hora exacta en que empezó a llenar el formulario">
-            <br>
-            <label for="">Fecha y hora: </label>
-            <input type="datetime" name="fecha-hora" title="Ingrese la hora y fecha exacta en que empezó a llenar el formulario">
-            <br>
-            <label for="">Mes: </label>
-            <input type="month" name="mes" title="Ingrese el mes en que vio la publicación del empleo">
-            <br>
-            <label for="">Semana: </label>
-            <input type="week" name="semana" title="Ingrese la semana en que vio la publicación del empleo">
-            <br>
-            <label for="">Número: </label>
-            <input type="number" name="numero" min="-10" max="10" title="Ingrese un número entre -10 y 10">
-            <br>
-            <label for="">Término de búsqueda: </label>
-            <input type="search" name="busqueda">
-        </fieldset>
-        <fieldset>
-            <legend>Hola de vida</legend>
-            <label for="">Foto: </label>
-            <input type="file" name="foto" title="Formato jpeg,png">
-            <br>
-            <label for="">Hoja de vida: </label>
-            <input type="file" name="hv" title="Formato PDF">
-            <br>
-            <label for="">Seleccione el puesto de interés: </label>
-            <select name="puesto">
-                <option value="1">Machine learning</option>
-                <option value="2">Frontend</option>
-                <option value="3">Backend</option>
-                <option value="4">Scrum master </option>
-                <option value="5">Pruebas automatizadas</option>
-            </select>
-        </fieldset>
-        <fieldset>
-            <label for="">Comentario: </label>
-            <textarea name="comentario" id="" cols="30" rows="10" placeholder="Ingrese alguna inquietud o comentario si lo desea"></textarea>
-        </fieldset>
-        <br><br>
-        <button type="submit">ENVIAR</button>
-    </form>
+            <fieldset class="textarea">
+                <legend>Comentario</legend>
+                <div class="content_texta">
+                    <textarea name="comentario" id="" cols="30" rows="10" placeholder="Ingrese alguna inquietud o comentario si lo desea"></textarea>
+                </div>
+                
+            </fieldset>
+            <br><br>
+            <button type="submit">ENVIAR</button>
+        </form>
+    <br>
+</div>
+<footer>
+    <h5>Elaborado por: María Fernanda Monroy </h5>
+    <h6>Grupo: Ibagirls</h6>
+    
+</footer>
 </body>
+
 </html>
